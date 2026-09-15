@@ -1,0 +1,23 @@
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
+
+config:
+  APP_ENV: staging
+  APP_MESSAGE: "api staging"
+
+ingress:
+  enabled: true
+  host: ""
