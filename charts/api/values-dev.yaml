@@ -18,5 +18,5 @@ config:
   APP_MESSAGE: "api dev"
 
 ingress:
-  enabled: true
+  enabled: false
   host: ""   # leave empty to use ALB DNS
