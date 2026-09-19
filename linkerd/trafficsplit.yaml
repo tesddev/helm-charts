@@ -1,0 +1,12 @@
+apiVersion: split.smi-spec.io/v1alpha1
+kind: TrafficSplit
+metadata:
+  name: api-split
+  namespace: dev
+spec:
+  service: api-dev
+  backends:
+    - service: api-dev-v1
+      weight: 900
+    - service: api-dev-v2
+      weight: 100
